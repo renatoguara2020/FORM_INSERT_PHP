@@ -16,7 +16,7 @@ include_once "conexao.php";
 
     $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT); 
     
-    if(!empty($dados['SendCadUsuario'])){
+    if(!empty($dados['SendCadUsuario']) && isset($dados['SendCadUsuario'])){
         //var_dump($dados);
 
         $query_usuario = "INSERT INTO usuarios (nome, email, senha, sists_usuario_id, niveis_acesso_id, created) 
