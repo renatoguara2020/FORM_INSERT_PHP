@@ -60,7 +60,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         <label>Nível de Acesso: </label>
         <input type="number" name="niveis_acesso_id" placeholder="Nível de acesso do usuário" required /><br><br>
 
-        <input type="submit" value="Cadastra" name="SendCadUsuario" />
+        <input type="submit" value="Cadastrar" name="SendCadUsuario" />
     </form>
 </body>
 
