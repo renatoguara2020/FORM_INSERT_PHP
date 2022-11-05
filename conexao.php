@@ -1,11 +1,16 @@
 <?php
+require_once "config.php";
+
+?>
+
+<?php
 
     //Inicio da conexão com o banco de dados utilizando PDO
-    $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $dbname = "celke";
-    $port = 3306;
+    $host = BD_SERVIDOR;
+    $user = BD_USUARIO;
+    $pass = BD_SENHA;
+    $dbname = BD_BANCO;
+    $port = BD_PORT;
 
     try {
         //Conexão com a porta
