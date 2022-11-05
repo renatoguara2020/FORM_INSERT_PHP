@@ -14,6 +14,8 @@ include_once "conexao.php";
     <h2>Cadastrar Usuário</h2>
     <?php
 
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
     $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT); 
     
     if(!empty($dados['SendCadUsuario']) && isset($dados['SendCadUsuario'])){
@@ -37,6 +39,7 @@ include_once "conexao.php";
                     echo "Erro: Usuário não cadastrado com sucesso!<br>";
                 }
     }
+}
 
     ?>
     <form method="POST" action="">
