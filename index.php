@@ -38,7 +38,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                              <h3>New record created Sucessfully !!</h3>
                           </div>';
                 }else{
-                    echo "Erro: Usuário não cadastrado com sucesso!<br>";
+                    
                     echo '<div class="alert alert-danger" role="alert">
                                Unable to create new record!
                           </div>';
