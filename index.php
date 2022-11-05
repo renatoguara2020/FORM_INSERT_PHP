@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 VALUES (:nome, :email, :senha, :sists_usuario_id, :niveis_acesso_id, NOW())";
                 $cad_usuario = $conn->prepare($query_usuario);
                 $cad_usuario->bindParam(':nome', $dados['nome'], PDO::PARAM_STR);
-                $cad_usuario->bindParam(':email', $dados['email']);
+                $cad_usuario->bindParam(':email', $dados['email'], PDO::PARAM_STR);
                 $senha_cript = password_hash($dados['senha'], PASSWORD_DEFAULT);
                 $cad_usuario->bindParam(':senha', $senha_cript);
                 $cad_usuario->bindParam(':sists_usuario_id', $dados['sists_usuario_id'], PDO::PARAM_INT);
@@ -33,7 +33,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                 $cad_usuario->execute();
 
-                if($cad_usuario->rowCount()){
+                if($cad_usuario->rowCount() > 0){
                     echo "Usuário cadastrado com sucesso!<br>";
                 }else{
                     echo "Erro: Usuário não cadastrado com sucesso!<br>";
