@@ -40,7 +40,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 }else{
                     
                     echo '<div class="alert alert-danger" role="alert">
-                               Unable to create new record!
+                               Unable to create new record! Try again later !!
                           </div>';
                 }
     }
