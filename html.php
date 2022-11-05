@@ -9,7 +9,22 @@
 </head>
 
 <body>
+    <?php
+   
+   $hoje = date('d/m/Y');
+   
+   echo ('<h1>'.$hoje.'</h1>');
 
+   $dias = array('Segunda','Terça','Quarta','Quinta');
+   $meses =	['Janeiro',	'Fevereiro','Março','Abril'];
+
+   print_r($dias);
+   echo '<br>';
+
+   print_r($meses);
+
+
+    ?>
 
 </body>
 
