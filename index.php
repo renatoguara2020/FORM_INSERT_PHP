@@ -30,6 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $cad_usuario->bindParam(':senha', $senha_cript);
                 $cad_usuario->bindParam(':sists_usuario_id', $dados['sists_usuario_id'], PDO::PARAM_INT);
                 $cad_usuario->bindParam(':niveis_acesso_id', $dados['niveis_acesso_id'], PDO::PARAM_INT);
+                $conn->beginTransaction();
 
                 $cad_usuario->execute();
 
