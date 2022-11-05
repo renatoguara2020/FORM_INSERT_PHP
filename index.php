@@ -35,7 +35,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                 if($cad_usuario->rowCount() > 0){
                     echo '<div class="alert alert-success" role="alert">
-                             New record created Sucessfully !
+                             <h3>New record created Sucessfully !!</h3>
                           </div>';
                 }else{
                     echo "Erro: Usuário não cadastrado com sucesso!<br>";
