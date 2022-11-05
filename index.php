@@ -35,7 +35,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                 if($cad_usuario->rowCount() > 0){
                     echo '<div class="alert alert-success" role="alert">
-                             <h3>New record created Sucessfully !!!<h3>
+                             <h3>New record created Successfully !!!<h3>
                           </div>';
                 }else{
                     
