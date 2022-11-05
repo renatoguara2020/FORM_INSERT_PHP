@@ -39,6 +39,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                           </div>';
                 }else{
                     echo "Erro: Usuário não cadastrado com sucesso!<br>";
+                    echo '<div class="alert alert-danger" role="alert">
+                               Unable to create new record!
+                          </div>';
                 }
     }
 }
