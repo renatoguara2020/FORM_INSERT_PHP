@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT); 
     
-    if(!empty($dados['SendCadUsuario']) && isset($dados['SendCadUsuario'])){
+    if(!empty($dados['SendCadUsuario']) && isset($dados['SendCadUsuario']) == true){
         //var_dump($dados);
 
         $query_usuario = "INSERT INTO usuarios (nome, email, senha, sists_usuario_id, niveis_acesso_id, created) 
